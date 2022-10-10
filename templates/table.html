@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<table class="table">
+    <tr>
+        <th>Username</th>
+        <th>description</th>
+        <th>followers</th>
+        <th>following</th>
+    </tr>
+    <div class="container">        
+        {% for person in persons %}
+            <tr>
+                <td><a class="tweets" href="{% url 'last_tweets' person_id=person.id %}" >{{person.name}}</a></td>
+                <td>{{person.description}}</td>
+                <td>{{person.followers_count}}</td>
+                <td>{{person.following}}</td>
+            </tr>
+        {% endfor %}
+    </div>
+</table>
+
+{% endblock content %}
