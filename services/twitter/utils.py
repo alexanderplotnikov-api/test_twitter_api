@@ -1,10 +1,9 @@
 from typing import Optional
 
-from services.twitter.models import TwitterUserModel
 from services.twitter.api import api
 
 
-def get_twitter_info_by_name(name: str) -> Optional[TwitterUserModel]:
+def get_twitter_info_by_name(name: str):
     return api.get_user(screen_name=name)
 
 
