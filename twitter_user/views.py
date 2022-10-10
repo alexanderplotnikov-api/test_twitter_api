@@ -5,7 +5,7 @@ from services.common_utils import urls_to_screen_name
 from services.twitter.utils import get_lists_of_twitter_users, get_last_tweets_by_username
 
 
-def get_smt(request):
+def get_index_page(request):
     template = loader.get_template('index.html')
     context = {}
     return HttpResponse(template.render(context, request))

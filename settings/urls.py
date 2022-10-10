@@ -16,11 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from twitter_user.views import get_smt, get_users_info, get_user_tweets
+from twitter_user.views import get_index_page, get_users_info, get_user_tweets
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', get_smt, name='index'),
+    path('', get_index_page, name='index'),
     path('table/', get_users_info, name='user_info'),
     path(r'table/last_tweets/(?P<person_id>[0-9]+)$', get_user_tweets, name='last_tweets'),
 ]
