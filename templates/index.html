@@ -15,12 +15,12 @@
 
     $(document).ready(function() {
         let container = $('.dynamic')
-        var wrapper = $(".form-example");
-        var add_button = $("#add_form_field");
+        let wrapper = $(".form-example");
+        let add_button = $("#add_form_field");
     
         $(add_button).click(function(e) {
             e.preventDefault();
-            var new_wrapper = wrapper.clone()
+            let new_wrapper = wrapper.clone()
             new_wrapper.append('<a href="#" class="delete">Delete</a></div>')
             $(container).append(`<div class='form-group'> ${new_wrapper.html()} </div>`); 
         });
