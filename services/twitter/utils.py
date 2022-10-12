@@ -22,7 +22,7 @@ def get_lists_of_twitter_users(names: list[str]):
                         'screen_name': person.screen_name,
                         'description': person.description,
                         'followers_count': person.followers_count,
-                        'following': person.following,
+                        'following': person.friends_count,
                     }
                 )
         except tweepy.errors.NotFound as e:
