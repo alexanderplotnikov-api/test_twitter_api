@@ -1,7 +1,7 @@
 from services.twitter.api import api
 
 
-def get_twitter_info_by_names(name: list[str]):
+def get_twitter_info_by_names(name):
     return api.lookup_users(screen_name=name)
 
 
@@ -10,7 +10,7 @@ def get_chunked_list(values, size):
         yield values[i:i + size]
 
 
-def get_lists_of_twitter_users(names: list[str]):
+def get_lists_of_twitter_users(names):
     names = list(set(names))
     data = []
     errors = []

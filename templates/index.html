@@ -1,11 +1,475 @@
-{% extends "base.html" %}
-{% block content %}
-<form action={%url 'user_info' %} method="post" class="form">
-    {% csrf_token %}
-    <div class="">
-        <p>User Links: </p>
-        <textarea name="urls" required></textarea>
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--		<link rel="stylesheet" href="{% static 'css/main.css' %}">-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<title>Advocatorium</title>
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <div>
+    <div class="header">
+      <div class="header-wrapper wrapper">
+        <div class="logo">
+          <a href="" class="header__logo-link">
+            <img src="./static/img/Advo_logo.svg" alt="Легко конвертируем наш  опыт в вашу уверенность" class="header__logo-pic" />
+          </a>
+
+        </div>
+        <div class="links">
+          <a href="#!" class="header__link">Главная страница</a>
+          <a href="#!" class="header__link">Услуги</a>
+          <a href="#!" class="header__link">Цены</a>
+          <a href="#!" class="header__link">Статьи</a>
+          <a href="#!" class="header__link">Контакты</a>
+
+        </div>
+        <div class="buttons">
+          <a href="#!" class="header-btn header__link">
+            Заказать звонок
+          </a>
+          <div class="burger">
+            <img src="./static/img/burger.svg" alt="" class="burger-pic">
+          </div>
+          </div>
+      </div>
     </div>
-  <button type="submit" class="btn btn-primary">OK</button>
-</form>
-{% endblock content %}
+  </div>
+    <div class="intro">
+      <div class="intro-back-image"></div>
+      <div class="intro-back-overlay"></div>
+      <div class="wrapper intro-wrapper">
+        <div class="top-intro">
+          <p>
+              Легко <b>конвертируем</b><br>
+            наш опыт в вашу <br>
+            <b>уверенность</b>
+            <a class="intro-btn">
+              Нужна консультация!
+            </a>
+          </p>
+          <p class="top-left-intro">Занимаемся решением<br>
+              юридических вопросов<br>
+              любой сложности<br>
+              на протяжении 10 лет
+          </p>
+        </div>
+
+        <div class="bottom-intro">
+          <div class="contacts">
+            <span class="bold_contacts">Контакты :</span>
+            <p class="numbers">+7 (905) 333 33 33
+            </p>
+            <p class="mail">info@advocatorium.ru
+            </p>
+          </div>
+          <div class="intro-uslugi-list">
+            <p>Уголовное право</p>
+            <p>Семейное право</p>
+            <p>Кадастровые вопросы</p>
+            <p>Банкротство<p>
+          </div>
+
+      </div>
+    </div>
+    </div>
+
+  <div class="services">
+    <div class="wrapper">
+      <div class="section-name">
+        <p class="section-h">
+          Наши услуги
+        </p>
+        <a class="section-link">
+          <span class="underline">Все услуги</span>
+        </a>
+      </div>
+
+      <div class="header-wrapper">
+        <p class="m2">
+          Консультация и помощь по вопросам права в различных областях. Предоставляем решения, а не советы. Решим любой вопрос своевременно
+        </p>
+        <p class="m3">
+          Держим наши обещания и отмечаем наши общие победы. Мы внимательные, сконцентрированные на работе специалисты своего дела
+        </p>
+      </div>
+
+      <div class="blocks">
+        <div class="m2 news">
+          <img src="./static/img/sem_pravo.jpg" alt="" class="m2_pic">
+          <div class="m2">
+            <div class="header_strong">
+              Семейное право
+            </div>
+
+            <div class="description">
+              Какое-то описание в несколько строчек о том какие конкретно услуги предоставляют. Какое-то описание в несколько строчек о том какие конкретно услуги предоставляют. Какое-то описание в несколько строчек о том какие конкретно услуги предоставляют. Какое-то описание в несколько строчек о том какие конкретно услуги предоставляют
+            </div>
+          </div>
+        </div>
+
+        <div class="m2 news">
+          <img src="./static/img/bankrotstvo_pic.jpg" alt="" class="m2_pic">
+          <div class="m2">
+            <div class="header_strong">
+              Банкротство
+            </div>
+
+            <div class="description">
+              Какое-то описание в несколько строчек о том какие конкретно услуги предоставляют. Какое-то описание в несколько строчек о том какие конкретно услуги предоставляют. Какое-то описание в несколько строчек о том какие конкретно услуги предоставляют. Какое-то описание в несколько строчек о том какие конкретно услуги предоставляют
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="m2 news">
+          <img src="./static/img/Kadastr_voprosy.jpg" alt="" class="m2_pic">
+          <div class="m2">
+            <div class="header_strong">
+              Кадастровые вопросы
+            </div>
+
+            <div class="description">
+              Какое-то описание в несколько строчек о том какие конкретно услуги предоставляют. Какое-то описание в несколько строчек о том какие конкретно услуги предоставляют. Какое-то описание в несколько строчек о том какие конкретно услуги предоставляют. Какое-то описание в несколько строчек о том какие конкретно услуги предоставляют
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="m2 news">
+          <img src="./static/img/ugolov_pravo.jpg" alt="" class="m2_pic">
+          <div class="m2">
+            <div class="header_strong">
+              Уголовное право
+            </div>
+
+            <div class="description">
+              Какое-то описание в несколько строчек о том какие конкретно услуги предоставляют. Какое-то описание в несколько строчек о том какие конкретно услуги предоставляют. Какое-то описание в несколько строчек о том какие конкретно услуги предоставляют. Какое-то описание в несколько строчек о том какие конкретно услуги предоставляют
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="help">
+    <div class="wrapper">
+      <div class="help-h">
+          Есть вопрос и вы не знаете <br>к кому обратиться?
+      </div>
+
+      <div class="help-desc">
+        Оставьте свои данные и мы найдем решение
+      </div>
+
+      <div>
+        <form>
+          <input placeholder='Введите ваше имя' class="input1"/>
+          <input placeholder='Введите ваш номер телефона' class="input1"/>
+          <button type="submit" class="intro-btn mt1 mb1">Заказать звонок</button>
+        </form>
+      </div>
+
+      <img src="./static/img/thinking_baba.jpg" alt="" class="woman">
+
+    </div>
+  </div>
+
+
+  <div class="services">
+    <div class="wrapper">
+      <div class="section-name">
+        <p class="section-h">
+          Цены
+        </p>
+        <a class="section-link">
+          <span class="underline">Все цены</span>
+        </a>
+      </div>
+
+      <div class="price-list">
+        <div class="price-h">
+          Консультация и экспертиза:
+        </div>
+        <ul class="prices">
+          <li>
+            <div>
+              Устная консультация адвоката
+            </div>
+            <div>
+              3000р
+            </div>
+          </li>
+          <li>
+            <div>
+              Правовая экспертиза документов
+            </div>
+            <div>
+              5000р
+            </div>
+          </li>
+          </ul>
+      </div>
+        <div class="price-list">
+        <div class="price-h">
+          Уголовные дела:
+        </div>
+        <ul class="prices">
+          <li>
+            <div>
+              Защита на стадии дознания и предварительного следствия
+            </div>
+            <div>
+              от 60 000р.
+            </div>
+          </li>
+          <li>
+            <div>
+              Защита в суде первой инстанции
+            </div>
+            <div>
+              от 100 000р.
+            </div>
+          </li>
+          <li>
+            <div>
+              Защита в суде апелляционной инстанции
+            </div>
+            <div>
+              от 100 000р.
+            </div>
+          </li>
+          <li>
+            <div>
+              Защита в суде кассационной инстанции
+            </div>
+            <div>
+              от 100 000р.
+            </div>
+          </li>
+        </ul>
+      </div>
+
+        <div class="price-list">
+        <div class="price-h">
+          Гражданские дела:
+        </div>
+        <ul class="prices">
+          <li>
+            <div>
+              Представление интересов в первой инстанции
+            </div>
+            <div>
+              от 60 000р.
+            </div>
+          </li>
+          <li>
+            <div>
+              Представление интересов в апелляционной инстанции
+            </div>
+            <div>
+              от 40 000 р.
+            </div>
+          </li>
+          <li>
+            <div>
+              Представление интересов в кассационной инстанции
+            </div>
+            <div>
+              от 40 000 р.
+            </div>
+          </li>
+          </ul>
+      </div>
+
+        <div class="price-list">
+        <div class="price-h">
+          Арбитражные дела:
+        </div>
+        <ul class="prices">
+          <li>
+            <div>
+              Представление интересов в первой инстанции
+            </div>
+            <div>
+              от 150 000р.
+            </div>
+          </li>
+          <li>
+            <div>
+              Представление интересов в апелляционной инстанции
+            </div>
+            <div>
+              от 120 000 р.
+            </div>
+          </li>
+          <li>
+            <div>
+              Представление интересов в кассационной инстанции
+            </div>
+            <div>
+              от 100 000 р.
+            </div>
+          </li>
+          </ul>
+      </div>
+      <div class="price-h">
+        Гонорар
+      </div>
+      <div class="prices">
+        Гонорар успеха (дополнительно к основной оплате % от выигранной суммы иска) в арбитражном судопроизводстве и в гражданском от 5 до 20 %
+        </div>
+        <div class="prices mt1">
+            Размер гонорара может быть установлен в меньшем размере по соглашению сторон в исключительных случаях, а в случае фактора сложности (отсутствие единообразной практики по данной категории дел, значительное количество участников в судебном процессе, значительное количество предполагаемых процессуальных действий, необходимость сложных расчётов при наличии большого количества первичных документов) увеличен.
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="services">
+    <div class="wrapper">
+      <div class="section-name">
+        <p class="section-h">
+          Полезные статьи
+        </p>
+        <a class="section-link">
+          <span class="underline">Все статьи</span>
+        </a>
+      </div>
+    <div class="news">
+
+      <div class="title mw350">
+        <div class="news title-meta">
+          <p >10.09.2022</p>
+          <p>Семья</p>
+        </div>
+        <div>
+          <img src="./static/img/semya-pic.jpg" alt="" class="m1 img">
+        </div>
+
+        <div class="title-h">
+            <b>Взыскание задолженности по алиментам</b>
+        </div>
+        <div class="title-desc">
+          В статье мы рассмотрим способы взыскания алиментов. И разберемся в каких ситуациях лучше взыскивать алименты в процентах, а в каких в твердой денежной сумме. Что делать, какие собирать документы и куда обращаться.
+        </div>
+      </div>
+
+      <div class="title mw350">
+        <div class="news title-meta">
+          <p >30.08.2022</p>
+          <p>Жилье</p>
+        </div>
+        <div>
+          <img src="./static/img/jilye-pic.jpg" alt="" class="m1 img">
+        </div>
+
+        <div class="title-h">
+            <b>Как принимать квартиру у застройщика?</b>
+        </div>
+        <div class="title-desc">
+          Приобретение строящегося жилого помещения сопровождается рисками. Возможными последствиями являются нарушение застройщиком сроков введения жилья в эксплуатацию,  несоответствие объекта.
+        </div>
+      </div>
+
+     <div class="title mw350">
+        <div class="news title-meta">
+          <p >14.09.2022</p>
+          <p>Финансы</p>
+        </div>
+        <div>
+          <img src="./static/img/finance-pic.jpg" alt="" class="m1 img">
+        </div>
+
+        <div class="title-h">
+            <b>Как получить страховую выплату?</b>
+        </div>
+        <div class="title-desc">
+          Многим кажется, что процесс взыскания средств со страховой компании достаточно понятный и легкий.  В данной статье мы расскажем о способах получения страховки и возможных трудностях, с которыми можно столкнуться.
+        </div>
+      </div>
+
+
+
+    </div>
+    </div>
+
+  </div>
+
+  <div class="map wrapper">
+    <div class="left-menu">
+      <div class="mt3 ml4 mr4">
+        <img src="./static/img/Advo_logo.svg " alt="" class="m1 img">
+
+      </div>
+      <div class="mt2 ml4 mr4">
+          <img src="./static/img/phone.jpg" alt="" class="img-maps">
+        +7 (777) 777 77 77
+      </div>
+      <div class="mt2 ml4 mr4">
+          <img src="./static/img/letter.jpg" alt="" class="img-maps">
+        info@advacatorium.ru
+      </div>
+      <div class="mt2 mb3 ml4 mr4">
+          <img src="./static/img/ep_location.jpg" alt="" class="img-maps">
+        Москва, 111024,<br>ул. Душинская 18к1
+      </div>
+        <img src="./static/img/insta.svg" alt="" class="insta-img">
+        <img src="./static/img/telega.svg" alt="" class="telega-img">
+        <img src="./static/img/facebook.svg" alt="" class="facebook-img">
+    </div>
+    <div class="">
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A88f5f8255303f7e3c0c38cdbbccaf9752b39a1a419a2dcfbcc0521749e44d4a9&amp;source=constructor" frameborder="0"></iframe>  </div>
+</div>
+
+
+<div>
+  <div class="footer">
+    <div class="wrapper">
+      <div>
+        <a href="" class="header__logo-link" >
+          <img src="./static/img/Advo_logo.svg" alt="Легко конвертируем наш  опыт в вашу уверенность" class="header__logo-pic">
+        </a>
+        <div><a href="" class='link'>Политика конфиденциальности</a></div>
+        <div><a href="" class='link'> Пользовательское соглашение</a></div>
+      </div>
+
+      <div>
+        <div class="links">
+          <a href="#!" class="header__link">Главная страница</a>
+          <a href="#!" class="header__link">Услуги</a> 
+          <a href="#!" class="header__link">Цены</a> 
+          <a href="#!" class="header__link">Статьи</a> 
+          <a href="#!" class="header__link">Контакты</a> 
+        </div>
+      </div>
+
+      <div>
+        <div class="buttons">
+          <a href="#!" class="header-btn header__link">
+            Заказать звонок
+          </a>
+        </div>
+        <div class="numbers">+7 (905) 333 33 33
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+</div>
+</body>
+
+
+
+
+
